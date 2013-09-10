@@ -258,8 +258,8 @@
 </SETTINGS>
 <METADATA>
 <REGIONS>
-<REGION ID="4735" RegionName="Organograma da Empresa" XPos="1029" YPos="6" Width="884" Height="416" RegionColor="1" TablePrefix="0" TableType="1" OverwriteTablePrefix="0" OverwriteTableType="0" Comments="" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="16" />
 <REGION ID="4635" RegionName="Controle de Permiss\245es" XPos="6" YPos="8" Width="885" Height="620" RegionColor="0" TablePrefix="0" TableType="1" OverwriteTablePrefix="0" OverwriteTableType="0" Comments="" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="2" />
+<REGION ID="4735" RegionName="Organograma da Empresa" XPos="1029" YPos="6" Width="884" Height="416" RegionColor="1" TablePrefix="0" TableType="1" OverwriteTablePrefix="0" OverwriteTableType="0" Comments="" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="16" />
 </REGIONS>
 <TABLES>
 <TABLE ID="4636" Tablename="sys_sistema" PrevTableName="Table_01" XPos="21" YPos="35" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="3" >
@@ -459,6 +459,7 @@
 </COLUMNS>
 <RELATIONS_START>
 <RELATION_START ID="4712" />
+<RELATION_START ID="4832" />
 </RELATIONS_START>
 <RELATIONS_END>
 <RELATION_END ID="4686" />
@@ -562,6 +563,10 @@
 </OPTIONSELECTED>
 </COLUMN>
 </COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="4821" />
+<RELATION_START ID="4838" />
+</RELATIONS_START>
 <INDICES>
 <INDEX ID="4739" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
 <INDEXCOLUMNS>
@@ -600,6 +605,9 @@
 </OPTIONSELECTED>
 </COLUMN>
 </COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="4827" />
+</RELATIONS_START>
 <INDICES>
 <INDEX ID="4759" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
 <INDEXCOLUMNS>
@@ -608,8 +616,20 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="4764" Tablename="sys_empresa_departamento" PrevTableName="Table_09" XPos="1437" YPos="200" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="19" >
+<TABLE ID="4764" Tablename="sys_empresa_departamento" PrevTableName="Table_09" XPos="1412" YPos="235" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="19" >
 <COLUMNS>
+<COLUMN ID="4825" ColName="dep_empresa" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="4830" ColName="dep_codigo" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
 <COLUMN ID="4778" ColName="dep_responsavel" PrevColName="" Pos="2" idDatatype="20" DatatypeParams="(50)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="Responsavel">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
@@ -632,9 +652,43 @@
 </OPTIONSELECTED>
 </COLUMN>
 </COLUMNS>
+<RELATIONS_END>
+<RELATION_END ID="4821" />
+<RELATION_END ID="4827" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="4826" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="4825" LengthParam="0" />
+<INDEXCOLUMN idColumn="4830" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="4823" IndexName="sys_empresa_departamento_FKIndex1" IndexKind="1" FKRefDef_Obj_id="4821">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="4825" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="4829" IndexName="sys_empresa_departamento_FKIndex2" IndexKind="1" FKRefDef_Obj_id="4827">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="4830" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
 </TABLE>
 <TABLE ID="4782" Tablename="sys_usuario_empresa" PrevTableName="Table_10" XPos="684" YPos="353" TableType="1" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="22" >
 <COLUMNS>
+<COLUMN ID="4836" ColName="usr_codigo" PrevColName="" Pos="1" idDatatype="2" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="4841" ColName="usr_empresa" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
 <COLUMN ID="4803" ColName="usr_ativo" PrevColName="" Pos="2" idDatatype="2" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="1" Comments="Ativo: 0 - N\227o, 1 - Sim">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
@@ -642,6 +696,28 @@
 </OPTIONSELECTED>
 </COLUMN>
 </COLUMNS>
+<RELATIONS_END>
+<RELATION_END ID="4832" />
+<RELATION_END ID="4838" />
+</RELATIONS_END>
+<INDICES>
+<INDEX ID="4837" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="4836" LengthParam="0" />
+<INDEXCOLUMN idColumn="4841" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="4834" IndexName="sys_usuario_empresa_FKIndex1" IndexKind="1" FKRefDef_Obj_id="4832">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="4836" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="4840" IndexName="sys_usuario_empresa_FKIndex2" IndexKind="1" FKRefDef_Obj_id="4838">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="4841" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
 </TABLE>
 </TABLES>
 <RELATIONS>
@@ -651,6 +727,10 @@
 <RELATION ID="4694" RelationName="Rotina x Permiss\245es Grupo" Kind="2" SrcTable="4642" DestTable="4660" FKFields="rot_codigo=prm_rotina\n" FKFieldsComments="Rotina x Permiss\245es Grupo\n" relDirection="3" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="5" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="4696" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="13" />
 <RELATION ID="4712" RelationName="Usu\225rio x Permiss\245es" Kind="2" SrcTable="4675" DestTable="4689" FKFields="usr_codigo=prm_usuario\n" FKFieldsComments="Usu\225rio x Permiss\245es\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="4714" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="14" />
 <RELATION ID="4715" RelationName="Rotina x Permiss\245es Usu\225rio" Kind="2" SrcTable="4642" DestTable="4689" FKFields="rot_codigo=prm_rotina\n" FKFieldsComments="Rotina x Permiss\245es Usu\225rio\n" relDirection="3" MidOffset="-88" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="-1" CaptionOffsetY="-24" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="4717" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="15" />
+<RELATION ID="4821" RelationName="Empresa x Departamentos" Kind="1" SrcTable="4736" DestTable="4764" FKFields="emp_codigo=dep_empresa\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="4823" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="21" />
+<RELATION ID="4827" RelationName="Departamento x Empresas" Kind="1" SrcTable="4756" DestTable="4764" FKFields="dep_codigo=dep_codigo\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="4829" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="22" />
+<RELATION ID="4832" RelationName="Usu\225rio x Empresas" Kind="1" SrcTable="4675" DestTable="4782" FKFields="usr_codigo=usr_codigo\n" FKFieldsComments="\n" relDirection="2" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="4834" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="23" />
+<RELATION ID="4838" RelationName="Empresa x Usu\225rios" Kind="1" SrcTable="4736" DestTable="4782" FKFields="emp_codigo=usr_empresa\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="4840" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="24" />
 </RELATIONS>
 <NOTES>
 <NOTE ID="4703" NoteName="Note_01" XPos="12" YPos="562" NoteText="Observa\231\245es:\n\n1. Campos do tipo VARCHAR(40) ser\227o GUID na base.\n2. Campos %s_ATIVO do tipo SMALLINT possuem dom\237nio 0 e 1\n" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="14" />
